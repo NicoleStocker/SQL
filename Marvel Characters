@@ -1,6 +1,6 @@
---Create two tables that contain:
-At least 15 rows total about famous people.
-One of the tables contains a column that relates to the primary key of another table.
+# Create two tables about famous people that contain:
+ --At least 15 rows total.
+ --One of the tables contains a column that relates to the primary key of another table.
 
 CREATE TABLE marvel_cast (id INTEGER PRIMARY KEY AUTOINCREMENT,
 fullname TEXT,
@@ -61,7 +61,8 @@ JOIN character
 ON marvel_cast.character = character.id
 ORDER BY total_marvel_films DESC;
 
-#--Which actor in this table has been in the most Marvel Films?
+# Which actor in this table has been in the most Marvel Films?
+
 SELECT fullname, MAX(total_marvel_films) AS most_films
 FROM marvel_cast;
 
