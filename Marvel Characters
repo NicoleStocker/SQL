@@ -1,4 +1,6 @@
---Create a table about famous people
+--Create two tables that contain:
+At least 15 rows total about famous people.
+One of the tables contains a column that relates to the primary key of another table.
 
 CREATE TABLE marvel_cast (id INTEGER PRIMARY KEY AUTOINCREMENT,
 fullname TEXT,
@@ -50,17 +52,17 @@ INSERT INTO character VALUES (13, "Groot");
 INSERT INTO character VALUES (14, "Star Lord");
 INSERT INTO character VALUES (15, "Nick Fury");
 
+# Complete a query that does a join
 
-
---Which actor in this table has been in the most Marvel Films?
-SELECT fullname, MAX(total_marvel_films) AS most_films
-FROM marvel_cast;
-
---Show which character the actor/actress has played and how many films they have been in.
+--Which character the actor/actress has played and how many films they have been in.
 SELECT marvel_cast.fullname, character.name AS character, total_marvel_films
 FROM marvel_cast
 JOIN character
 ON marvel_cast.character = character.id
 ORDER BY total_marvel_films DESC;
+
+#--Which actor in this table has been in the most Marvel Films?
+SELECT fullname, MAX(total_marvel_films) AS most_films
+FROM marvel_cast;
 
 
