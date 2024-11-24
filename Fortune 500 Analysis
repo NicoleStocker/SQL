@@ -122,6 +122,7 @@ SELECT company_name, industry, MIN(revenue)
 FROM fortune_companies
 WHERE industry='Technology';
 
-#In order to continue this analysis with visualization, I saved the raw data as a CSV file and imported it into Excel. In Excel I ran pivot tables. 
-#I continued the analysis in Tableau.
-#The key insights were that there was a positive relationship between company revenue and employee tenure. In addition there were industry-specific trends, with Energy, Manufacturing, and Healthcare showing longer employee tenures.
+#In order to continue this analysis with visualization, I imported the data into Tableau.
+#Paid-time off and employee tenure have a positive relationship.
+#Revenue and Employee Tenure have a positive relationship.
+#Industries with longest tenure: Energy, Healthcare, and Manufacturing.
